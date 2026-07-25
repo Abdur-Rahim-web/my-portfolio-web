@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import { profile } from "@/data/profile";
@@ -13,7 +14,14 @@ const Hero = () => {
         >
             <div className="grid items-center gap-12 lg:grid-cols-2">
                 {/* Left Content */}
-                <div>
+                <motion.div
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                        duration: 0.7,
+                        ease: "easeOut",
+                    }}
+                >
                     <p className="text-lg font-medium text-blue-600">
                         👋 Hello, I&apos;m
                     </p>
@@ -67,21 +75,30 @@ const Hero = () => {
                             );
                         })}
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Content */}
-                <div className="flex justify-center">
+                <motion.div
+                    className="flex justify-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.2,
+                        ease: "easeOut",
+                    }}
+                >
                     <Image
                         src={profile.image}
                         alt={profile.name}
                         width={450}
                         height={450}
                         priority
-                        className="rounded-full border-8 border-slate-100 object-cover shadow-xl"
+                        className=" rounded-full border-8 border-slate-100 object-cover shadow-xl transition-transform duration-300 hover:scale-105 "
                     />
-                </div>
+                </motion.div>
             </div>
-        </Section>
+        </Section >
     );
 };
 
