@@ -1,21 +1,20 @@
 export interface Project {
-    id: number;
-    slug: string;
+  id: number;
+  slug: string;
 
-    title: string;
-    description: string;
+  title: string;
+  category: string;
 
-    image: string;
+  description: string;
+  image: string;
 
-    technologies: string[];
+  technologies: string[];
 
-    liveUrl: string;
+  liveUrl: string;
 
-    clientRepo: string;
-    serverRepo?: string;
+  clientRepo: string;
+  serverRepo?: string;
 
-    challenges: string;
-    futurePlans: string;
-
-    featured?: boolean;
+  challenges: string;
+  futurePlans: string;
 }

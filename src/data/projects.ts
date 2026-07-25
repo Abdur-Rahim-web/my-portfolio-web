@@ -4,18 +4,24 @@ export const projects: Project[] = [
     {
         id: 1,
         slug: "nestora",
+
         title: "Nestora",
+
+        category: "Property Rental Platform",
+
         description:
-            "A full-stack property rental and booking platform with role-based dashboards and secure Stripe payments.",
+            "A full-stack property rental and booking platform that enables property owners to list and manage rental properties while allowing tenants to search, book, and securely pay reservation fees through a modern and responsive interface.",
 
         image: "/images/projects/nestora.png",
 
         technologies: [
             "Next.js",
-            "TypeScript",
+            "JavaScript",
+            "Tailwind CSS",
+            "Express.js",
             "MongoDB",
-            "Stripe",
             "JWT",
+            "Stripe",
         ],
 
         liveUrl: "https://my-rental-client.vercel.app",
@@ -27,19 +33,22 @@ export const projects: Project[] = [
             "https://github.com/Abdur-Rahim-web/my-rental-server",
 
         challenges:
-            "Built role-based authentication, booking workflow, and Stripe payment integration while maintaining a secure user experience.",
+            "Implemented role-based authentication, secure booking workflows, Stripe payment integration, and property management while maintaining a scalable and responsive user experience.",
 
         futurePlans:
-            "Add real-time notifications, interactive maps, and advanced analytics.",
+            "Add real-time notifications, interactive maps, property sharing, email notifications, and advanced analytics for property owners.",
     },
+
     {
         id: 2,
         slug: "edupath-ai",
 
         title: "EduPath AI",
 
+        category: "AI Learning Platform",
+
         description:
-            "An AI-powered learning platform that helps users explore courses, manage learning resources, and receive intelligent assistance through modern AI features.",
+            "An AI-powered learning platform that helps users discover courses, manage learning resources, and receive intelligent assistance through Gemini AI in a modern and responsive interface.",
 
         image: "/images/projects/edupath-ai.png",
 
@@ -48,7 +57,6 @@ export const projects: Project[] = [
             "TypeScript",
             "Tailwind CSS",
             "MongoDB",
-            "Express.js",
             "JWT",
             "Gemini AI",
         ],
@@ -58,27 +66,32 @@ export const projects: Project[] = [
         clientRepo:
             "https://github.com/Abdur-Rahim-web/edupath-ai",
 
+        serverRepo: "",
+
         challenges:
-            "Integrating AI services, handling API limitations, implementing secure authentication, and designing a scalable learning platform.",
+            "Integrated AI-powered features, implemented secure authentication, protected routes, and handled AI API limitations while ensuring a smooth learning experience.",
 
         futurePlans:
-            "Add personalized learning recommendations, AI-generated quizzes, progress tracking, and instructor dashboards.",
+            "Add AI-generated quizzes, personalized learning recommendations, instructor dashboards, progress tracking, and certificate generation.",
     },
+
     {
         id: 3,
         slug: "studyspot",
 
         title: "StudySpot",
 
+        category: "Study Room Booking Platform",
+
         description:
-            "A full-stack study room booking platform that enables users to discover, reserve, and manage study spaces through a secure and responsive interface.",
+            "A full-stack study room booking platform that enables users to discover, reserve, and manage study spaces with secure authentication, role-based access control, and real-time booking validation.",
 
         image: "/images/projects/studyspot.png",
 
         technologies: [
             "Next.js",
+            "JavaScript",
             "Tailwind CSS",
-            "Node.js",
             "Express.js",
             "MongoDB",
             "JWT",
@@ -94,9 +107,9 @@ export const projects: Project[] = [
             "https://github.com/Abdur-Rahim-web/studyspot-server",
 
         challenges:
-            "Implemented booking conflict prevention, role-based permissions, secure authentication, and real-time booking validation.",
+            "Implemented booking conflict prevention, secure authentication, role-based permissions, and real-time time-slot validation while delivering a responsive user experience.",
 
         futurePlans:
-            "Add calendar synchronization, email notifications, online payments, and advanced booking analytics.",
+            "Add calendar synchronization, online payments, email notifications, booking analytics, and smart room recommendations.",
     },
 ];
