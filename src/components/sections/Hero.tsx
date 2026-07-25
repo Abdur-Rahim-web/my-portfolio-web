@@ -15,10 +15,10 @@ const Hero = () => {
                 {/* Left Content */}
                 <div>
                     <p className="text-lg font-medium text-blue-600">
-                        Hello, I&apos;m
+                        👋 Hello, I&apos;m
                     </p>
 
-                    <h1 className="mt-3 text-5xl font-extrabold leading-tight text-slate-900 lg:text-6xl">
+                    <h1 className="mt-3 text-5xl font-extrabold leading-tight bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent lg:text-6xl">
                         {profile.name}
                     </h1>
 
@@ -31,13 +31,22 @@ const Hero = () => {
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <Button>
-                            Download Resume
-                        </Button>
+                        <a
+                            href={profile.resume}
+                            download
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Button>
+                                Download Resume
+                            </Button>
+                        </a>
 
-                        <Button variant="outline">
-                            Contact Me
-                        </Button>
+                        <a href="#contact">
+                            <Button variant="outline">
+                                Contact Me
+                            </Button>
+                        </a>
                     </div>
 
                     <div className="mt-8 flex items-center gap-5">
@@ -51,7 +60,7 @@ const Hero = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={item.name}
-                                    className="text-2xl text-slate-600 transition hover:text-blue-600"
+                                    className="text-2xl text-slate-600 transition-all duration-300 hover:-translate-y-1 hover:text-blue-600"
                                 >
                                     <Icon />
                                 </a>
