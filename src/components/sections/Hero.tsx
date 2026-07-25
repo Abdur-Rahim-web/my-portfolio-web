@@ -64,7 +64,7 @@ const Hero = () => {
                             return (
                                 <a
                                     key={item.name}
-                                    href={item.href}
+                                    href={item.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={item.name}
