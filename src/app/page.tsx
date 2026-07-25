@@ -1,17 +1,11 @@
-import Button from "@/components/ui/Button";
+import Section from "@/components/ui/Section";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center gap-4">
-      <Button>Primary</Button>
-
-      <Button variant="secondary">
-        Secondary
-      </Button>
-
-      <Button variant="outline">
-        Outline
-      </Button>
-    </main>
+    <Section id="test">
+      <h1 className="text-4xl font-bold">
+        Hello Portfolio
+      </h1>
+    </Section>
   );
 }
