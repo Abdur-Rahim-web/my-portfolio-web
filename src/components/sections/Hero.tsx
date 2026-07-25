@@ -10,7 +10,7 @@ const Hero = () => {
     return (
         <Section
             id="home"
-            className="min-h-[calc(100vh-72px)] flex items-center"
+            className="py-20 lg:py-28 flex items-center"
         >
             <div className="grid items-center gap-12 lg:grid-cols-2">
                 {/* Left Content */}
@@ -26,7 +26,7 @@ const Hero = () => {
                         👋 Hello, I&apos;m
                     </p>
 
-                    <h1 className="mt-3 text-5xl font-extrabold leading-tight bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent lg:text-6xl">
+                    <h1 className="mt-3 text-4xl lg:text-5xl font-extrabold leading-tight bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent ">
                         {profile.name}
                     </h1>
 
@@ -68,7 +68,7 @@ const Hero = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={item.name}
-                                    className="text-2xl text-slate-600 transition-all duration-300 hover:-translate-y-1 hover:text-blue-600"
+                                    className="text-3xl text-slate-600 transition-all duration-300 hover:-translate-y-1 hover:text-blue-600"
                                 >
                                     <Icon />
                                 </a>
@@ -94,7 +94,7 @@ const Hero = () => {
                         width={450}
                         height={450}
                         priority
-                        className=" rounded-full border-8 border-slate-100 object-cover shadow-xl transition-transform duration-300 hover:scale-105 "
+                        className=" rounded-full border-8 border-slate-100 object-cover shadow-2xl ring-4 ring-blue-100 transition-transform duration-300 hover:scale-105 "
                     />
                 </motion.div>
             </div>
