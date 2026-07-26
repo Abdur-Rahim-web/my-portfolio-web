@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://your-domain.vercel.app";
+const SITE_URL = "https://my-portfolio-web-kappa-sepia.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

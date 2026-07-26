@@ -3,6 +3,7 @@ import {
     FaEnvelope,
     FaPhoneAlt,
     FaMapMarkerAlt,
+    FaWhatsappSquare,
 } from "react-icons/fa";
 
 import Section from "@/components/ui/Section";
@@ -54,6 +55,25 @@ const Contact = () => {
                             <div className="flex items-start gap-4">
                                 <div className="rounded-xl bg-blue-100 p-3 text-blue-600">
                                     <FaPhoneAlt size={18} />
+                                </div>
+
+                                <div>
+                                    <h4 className="font-semibold text-slate-900">
+                                        Phone
+                                    </h4>
+
+                                    <a
+                                        href={`tel:${contact.phone}`}
+                                        className="text-slate-600 transition hover:text-blue-600"
+                                    >
+                                        {contact.phone}
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="rounded-xl bg-blue-100 p-3 text-blue-600">
+                                    <FaWhatsappSquare  size={18} />
                                 </div>
 
                                 <div>
