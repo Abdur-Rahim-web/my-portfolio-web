@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-
 import "./globals.css";
 
 import Navbar from "@/components/shared/Navbar";
@@ -15,8 +14,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://your-domain.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://YOUR_PORTFOLIO_DOMAIN.vercel.app"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
     default: "Abdur Rahim | Full Stack Developer",
@@ -29,7 +30,6 @@ export const metadata: Metadata = {
   keywords: [
     "Abdur Rahim",
     "Full Stack Developer",
-    "Frontend Developer",
     "Next.js",
     "React",
     "TypeScript",
@@ -48,24 +48,43 @@ export const metadata: Metadata = {
 
   creator: "Abdur Rahim",
 
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
     title: "Abdur Rahim | Full Stack Developer",
 
     description:
-      "Modern Full Stack Developer Portfolio built with Next.js and TypeScript.",
+      "Explore the portfolio of Abdur Rahim featuring modern full-stack web applications built with Next.js, TypeScript, Express.js, and MongoDB.",
 
-    url: "https://YOUR_PORTFOLIO_DOMAIN.vercel.app",
+    url: SITE_URL,
 
     siteName: "Abdur Rahim Portfolio",
 
     locale: "en_US",
 
     type: "website",
+
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdur Rahim Portfolio",
+      },
+    ],
   },
 
-  robots: {
-    index: true,
-    follow: true,
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Abdur Rahim | Full Stack Developer",
+
+    description:
+      "Modern Full Stack Developer Portfolio built with Next.js and TypeScript.",
+
+    images: ["/images/og-image.png"],
   },
 
   icons: {
@@ -81,9 +100,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="flex min-h-full flex-col bg-white text-slate-900">
+      <body className="min-h-screen bg-white text-slate-900 antialiased">
         <Navbar />
         {children}
       </body>
