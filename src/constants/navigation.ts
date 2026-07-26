@@ -16,10 +16,6 @@ export const NAVIGATION_LINKS = [
     href: "/#education",
   },
   {
-    label: "Experience",
-    href: "/#experience",
-  },
-  {
     label: "Projects",
     href: "/#projects",
   },
